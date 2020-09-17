@@ -5,9 +5,17 @@ import React, {useState, useEffect} from 'react';
 import {
   Grid,
 } from '@material-ui/core';
+import { 
+  FacebookShareButton, 
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+} from 'react-share';
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const url = 'https://racereviewmsa.azurewebsites.net/';
+  const size = "2rem";
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -40,9 +48,30 @@ const Home = () => {
       <br />
       <div>Users can review old races as well as add races if they are not listed yet.</div>
       <br />
-      <div>Then head to the chat to talk more with fellow users about motor races.</div>
+      <div>Then head to the chat to talk more about motor races with fellow users.</div>
       <br />
       <br />
+      <div>Share us: on Social media:</div>
+      <br />
+      <div>
+      <FacebookShareButton
+         className="network__share-button"
+         url={url}
+        >
+        <FacebookIcon
+          size={size}
+        />
+      </FacebookShareButton>
+      &nbsp;
+      <TwitterShareButton
+          className="network__share-button"
+          url={url}
+        >
+        <TwitterIcon
+          size={size}
+        />
+      </TwitterShareButton>
+      </div>
     </Grid>
   </div>
 );}
