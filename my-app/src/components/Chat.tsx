@@ -46,8 +46,7 @@ const Chat = (
   // typescript
   // https://bilot.group/articles/modern-real-time-web-app-with-signalr/
   // const [hubConnection, setHubConnection] = useState<HubConnection>();
-  const apiBaseUrl = 'https://signalrchatmsa.azurewebsites.net';
-  // const apiBaseUrl = 'https://signalr123456.azurewebsites.net';
+  const apiBaseUrl = 'https://racereviewchatsignalr.azurewebsites.net';
 
   const handleMessageChange = (event: ChangeEvent<HTMLInputElement>) => {
     props.handleInputMessage(event.target.value);
