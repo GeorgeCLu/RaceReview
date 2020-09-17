@@ -298,10 +298,6 @@ const Race = (props: RaceProps) => {
         {' '}
         {singleRace.averageScore}
         <br />
-        Score Sum:
-        {' '}
-        {singleRace.scoreSum}
-        <br />
         Total Reviews:
         {' '}
         {singleRace.totalReviews}
@@ -599,10 +595,6 @@ const Race = (props: RaceProps) => {
             Average Score:
             {' '}
             {singleRace.averageScore}
-            <br />
-            Sum of Score:
-            {' '}
-            {singleRace.scoreSum}
             <br />
             Total Number of Reviews:
             {' '}

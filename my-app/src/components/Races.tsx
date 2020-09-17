@@ -332,21 +332,6 @@ const Races = (props: RacesProp) => {
                     }
                   }}
                 />
-                <RaceFilterTwoRow
-                  field="Sum of Scores"
-                  ascSort={() => {
-                    if (races !== null) {
-                      setRaces(races.sort((a, b) => a.scoreSum - b.scoreSum)
-                        .map((race) => (race)));
-                    }
-                  }}
-                  descSort={() => {
-                    if (races !== null) {
-                      setRaces(races.sort((a, b) => b.scoreSum - a.scoreSum)
-                        .map((race) => (race)));
-                    }
-                  }}
-                />
 
                 <RaceFilterTwoRow
                   field="Total Reviews"
@@ -386,9 +371,6 @@ const Races = (props: RacesProp) => {
                   </TableCell>
                   <TableCell>
                     {race.averageScore}
-                  </TableCell>
-                  <TableCell>
-                    {race.scoreSum}
                   </TableCell>
                   <TableCell>
                     {race.totalReviews}
@@ -681,21 +663,6 @@ const Races = (props: RacesProp) => {
                 }}
               />
               <br />
-              <RaceFilter
-                field="Sum of Scores"
-                ascSort={() => {
-                  if (races !== null) {
-                    setRaces(races.sort((a, b) => a.scoreSum - b.scoreSum)
-                      .map((race) => (race)));
-                  }
-                }}
-                descSort={() => {
-                  if (races !== null) {
-                    setRaces(races.sort((a, b) => b.scoreSum - a.scoreSum)
-                      .map((race) => (race)));
-                  }
-                }}
-              />
               <br />
               <RaceFilter
                 field="Total Reviews"
@@ -777,9 +744,6 @@ const Races = (props: RacesProp) => {
                   {race.averageScore}
                   <br />
                   Do not show:
-                  &nbsp;
-                  Score sum:
-                  {race.scoreSum}
                   &nbsp;
                   Total reviews:
                   {race.totalReviews}
