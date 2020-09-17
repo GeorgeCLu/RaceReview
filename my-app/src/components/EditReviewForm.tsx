@@ -126,8 +126,11 @@ const EditReviewForm = (props:EditReviewFormProps) => {
           alignItems="center"
           justify="center"
         >
+          <div>
           Editing Review
           <br />
+          </div>
+          <div>
           <br />
           <TextField
             className="customSelect"
@@ -154,6 +157,8 @@ const EditReviewForm = (props:EditReviewFormProps) => {
             <MenuItem value={10}>10</MenuItem>
           </TextField>
           <br />
+          </div>
+          <div>
           <br />
 
           <Button
@@ -176,6 +181,8 @@ const EditReviewForm = (props:EditReviewFormProps) => {
             Update
           </Button>
           <br />
+          </div>
+          <div>
           <br />
           <CustomTextField
             value={text}
@@ -190,6 +197,8 @@ const EditReviewForm = (props:EditReviewFormProps) => {
             rowsMax={32}
           />
           <br />
+          </div>
+          <div>
           <br />
           <Button
             disabled={!IsFormValid}
@@ -212,8 +221,11 @@ const EditReviewForm = (props:EditReviewFormProps) => {
             Update
           </Button>
           <br />
+          </div>
+          <div>
           <br />
           {message}
+          </div>
         </Grid>
         <br />
         <br />

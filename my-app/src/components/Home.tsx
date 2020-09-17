@@ -50,9 +50,11 @@ const Home = () => {
       <br />
       <div>Then head to the chat to talk more about motor races with fellow users.</div>
       <br />
-      <br />
+      <div><br /></div>
       <div>Share us: on Social media:</div>
+      <div>
       <br />
+      </div>
       <div>
       <FacebookShareButton
          className="network__share-button"
