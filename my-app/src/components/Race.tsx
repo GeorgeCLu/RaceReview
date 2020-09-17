@@ -464,6 +464,7 @@ const Race = (props: RaceProps) => {
                       </IconButton>
                       &nbsp;
                       &nbsp;
+                      { (user === review.reviewerName || user === 'admin' || user === 'Admin') && (
                       <Button
                         variant="contained"
                         color="primary"
@@ -483,8 +484,9 @@ const Race = (props: RaceProps) => {
                         }}
                       >
                         Edit
-                      </Button>
+                      </Button>)}
                       {' '}
+                      {(user === review.reviewerName || user === 'admin' || user === 'Admin') && (
                       <Button
                         variant="contained"
                         color="primary"
@@ -505,6 +507,7 @@ const Race = (props: RaceProps) => {
                       >
                         Delete
                       </Button>
+                      )}
                       {' '}
                       {deleteShow && deleteShowId === review.reviewId
                       && (

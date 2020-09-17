@@ -72,6 +72,7 @@ const Login = (props: LoginProps) => {
     if (
       user.length >= 1
       && user.length <= 25
+      && ((user !== 'admin' && user !== 'Admin' && user !== 'ADMIN')|| ((user === 'admin' || user === 'Admin' || user === 'ADMIN') && password === 'password'))
       // && password.length >= 1
     ) {
       setIsFormValid(true);
@@ -143,6 +144,22 @@ const Login = (props: LoginProps) => {
               justify="center"
             >
               <div>
+                <br/ >
+                {((user === 'admin' || user === 'Admin' || user === 'ADMIN') 
+                  && (<div>
+                  <CustomTextField
+                    id="outlined-basic"
+                    label="Password"
+                    className="test"
+                    variant="outlined"
+                    type="password"
+                    onChange={handlePassword}
+                    value={password}
+                  />
+                </div>))}
+                <br />
+              </div>
+              <div>
                 {IsFormValid && (
                 <Button
                   style={{
@@ -160,6 +177,7 @@ const Login = (props: LoginProps) => {
                   login
                 </Button>
                 )}
+                <br />
               </div>
             </Grid>
           </form>
