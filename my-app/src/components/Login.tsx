@@ -43,9 +43,23 @@ const Login = (props: LoginProps) => {
     setUser(event.target.value);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handlePassword = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
+  /*
+  <div>
+    <CustomTextField
+    id="outlined-basic"
+    label="Password"
+    className="test"
+    variant="outlined"
+    type="password"
+    onChange={handlePassword}
+    value={password}
+    />
+   </div>
+  */
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -58,7 +72,7 @@ const Login = (props: LoginProps) => {
     if (
       user.length >= 1
       && user.length <= 25
-      && password.length >= 1
+      // && password.length >= 1
     ) {
       setIsFormValid(true);
     } else {
@@ -69,6 +83,7 @@ const Login = (props: LoginProps) => {
   if (loggedInUser) {
     return (
       <div style={{ width: windowWidth * 0.9, tableLayout: 'auto' }}>
+        <br />
         <Grid
           container
           spacing={0}
@@ -103,8 +118,11 @@ const Login = (props: LoginProps) => {
             justify="center"
           >
             <h2>Login</h2>
+            <br />
+            No password currently required.
           </Grid>
           <form onSubmit={onSubmit}>
+            <br />
             <div>
               <CustomTextField
                 id="outlined-basic"
@@ -116,17 +134,6 @@ const Login = (props: LoginProps) => {
               />
             </div>
             <br />
-            <div>
-              <CustomTextField
-                id="outlined-basic"
-                label="Password"
-                className="test"
-                variant="outlined"
-                type="password"
-                onChange={handlePassword}
-                value={password}
-              />
-            </div>
             <br />
             <Grid
               container

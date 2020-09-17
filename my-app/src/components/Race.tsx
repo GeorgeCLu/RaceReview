@@ -265,12 +265,6 @@ const Race = (props: RaceProps) => {
     return (
       <Container maxWidth="xs">
         <br />
-        <h1>
-          {id}
-        </h1>
-        <div>
-          404 Not Found - not
-        </div>
       </Container>
     );
   }

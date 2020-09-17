@@ -265,7 +265,7 @@ const ReviewRace = (props: ReviewRaceProps) => {
               justify="center"
             >
               <TextField
-                placeholder="Enter review here - up to 255 chracters. Press Record to record voice - functionality only works in Chrome."
+                placeholder="Enter review here - up to 255 chracters. Press Record to record voice - functionality only available in Chrome."
                 multiline
                 rows={6}
                 rowsMax={32}
@@ -277,9 +277,9 @@ const ReviewRace = (props: ReviewRaceProps) => {
             </Grid>
           </div>
           <br />
+          <div>Heard:</div>
           <div style={{ tableLayout: 'auto', wordWrap: 'break-word' }}>
             <br />
-            Heard:
             <div id="interim" />
             <br />
             <br />
@@ -388,7 +388,7 @@ const ReviewRace = (props: ReviewRaceProps) => {
             justify="center"
           >
             <TextField
-              placeholder="Enter review here - up to 255 chracters. Press Record to record voice - functionality only works in Chrome."
+              placeholder="Enter review here - up to 255 chracters. Press Record to record voice - functionality only available in Chrome."
               multiline
               rows={6}
               rowsMax={32}
@@ -403,9 +403,9 @@ const ReviewRace = (props: ReviewRaceProps) => {
       </div>
 
       <br />
+      <div>Heard:</div>
       <div style={{ tableLayout: 'auto', wordWrap: 'break-word' }}>
         <br />
-        Heard:
         <div id="interim" />
       </div>
       <br />

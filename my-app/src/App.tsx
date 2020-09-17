@@ -72,7 +72,7 @@ interface MessageType {
 }
 
 const App = () => {
-  const [user, setUser] = useState<string|null>('Admin');
+  const [user, setUser] = useState<string|null>(null);
   // const [user, setUser] = useState(null);
   const [message, setMessage] = useState<string|null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -584,11 +584,20 @@ const App = () => {
               </Grid>
               <Grid container alignItems="flex-start" justify="flex-end" direction="row" style={{ color: 'red', fontFamily: 'Iceberg', fontSize: 22 }}>
                 <img alt="R" src={r} height="50" width="50" />
-                ace
-                <br />
-                &nbsp;
-                eview
-                &nbsp;
+                <div>
+                  <span>a</span>
+                  <span style={{color: 'white'}}>c</span>
+                  <span>e</span>
+                  <br />
+                  &nbsp;
+                  &nbsp;
+                  <span>e</span>
+                  <span style={{color: 'white'}}>v</span>
+                  <span>i</span>
+                  <span style={{color: 'white'}}>e</span>
+                  <span>w</span>
+                  &nbsp;
+                </div>
               </Grid>
             </Toolbar>
           </AppBar>
@@ -744,11 +753,20 @@ const App = () => {
                 </IconButton>
                 <Grid container alignItems="flex-start" justify="flex-end" direction="row" style={{ color: 'red', fontFamily: 'Iceberg', fontSize: 22 }}>
                   <img alt="R" src={r} height="50" width="50" />
-                  ace
-                  <br />
+                  <div>
+                    <span>a</span>
+                    <span style={{color: 'white'}}>c</span>
+                    <span>e</span>
+                    <br />
+                    &nbsp;
+                    &nbsp;
+                    <span>e</span>
+                    <span style={{color: 'white'}}>v</span>
+                    <span>i</span>
+                    <span style={{color: 'white'}}>e</span>
+                    <span>w</span>
                   &nbsp;
-                  eview
-                  &nbsp;
+                </div>
                 </Grid>
               </Toolbar>
             </AppBar>
