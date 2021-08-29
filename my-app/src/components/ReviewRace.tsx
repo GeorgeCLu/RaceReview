@@ -210,6 +210,8 @@ const ReviewRace = (props: ReviewRaceProps) => {
             </h2>
             <br />
             <br />
+            <p style={{display: "flex", justifyContent: "center", alignItems: "center"}}>You need to be logged in to review races.</p>
+            <br />
             Note: Leaving the page will not save entry
             <br />
             <br />
@@ -351,6 +353,8 @@ const ReviewRace = (props: ReviewRaceProps) => {
           Review this race
         </h2>
         <br />
+        <br />
+        <p style={{display: "flex", justifyContent: "center", alignItems: "center"}}>You need to be logged in to review races.</p>
         <br />
         <TextField
           className="customSelect"

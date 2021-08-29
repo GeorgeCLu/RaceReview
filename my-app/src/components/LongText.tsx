@@ -21,6 +21,15 @@ const LongText = (props: LongTextProps) => {
     };
   }, []);
 
+  if (windowWidth >= 600) {
+    return (
+      <div>
+        <br />
+        {text}
+      </div>
+    );
+  }
+
   return (
     <div style={{ width: windowWidth * 0.75, tableLayout: 'auto', wordWrap: 'break-word' }}>
       <br />

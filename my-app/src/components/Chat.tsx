@@ -105,6 +105,114 @@ const Chat = (
 
   useEffect(scrollToBottom, [props.chatMessages]);
 
+  if (windowWidth >= 600) {
+    return (
+      <div>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          <h2>Chat</h2>
+          <br />
+          <div className="post2">
+            <div className="hr"><hr /></div>
+            <div style={{ width: 300, height: 300, overflow: 'auto' }}>
+              <TableContainer component={Paper}>
+                <div style={{ overflow: 'auto', height: '300px' }}>
+                  <Table style={{ tableLayout: 'fixed' }}>
+                    <TableBody>
+                      {props.chatMessages.map((message) => (
+                        <TableRow>
+                          <TableCell style={{
+                            background: '#eee',
+                            margin: 0,
+                            padding: 0,
+                            borderTopWidth: 1,
+                            borderColor: 'black',
+                            borderStyle: 'solid',
+                            borderRightWidth: 0,
+                            borderLeftWidth: 0,
+                            borderBottomWidth: 0,
+                          }}
+                          >
+                            <div className="post">
+                              <div style={{ padding: 5 }}>
+                                <h4>{`${message.sender}${'    '}${message.postTime}`}</h4>
+                                <p style={{ wordWrap: 'break-word' }}>{message.text}</p>
+                              </div>
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                      <div ref={chatMessagesEndRef} />
+                    </TableBody>
+                  </Table>
+                </div>
+              </TableContainer>
+            </div>
+  
+            <div className="hr"><hr /></div>
+          </div>
+          {props.newMessageNotification}
+          <br />
+          <br />
+          <form onSubmit={sendMessage}>
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              justify="center"
+            >
+  
+              <div>
+                <br />
+                <CustomTextField
+                  placeholder="Message must be between 1 and 150 characters."
+                  multiline
+                  rows={6}
+                  rowsMax={32}
+                  onChange={handleMessageChange}
+                  value={props.inputMessage}
+                  size="medium"
+                  className="chat"
+                />
+              </div>
+              <div>
+                <br />
+                {IsFormValid && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  disabled={!IsFormValid}
+                  style={{
+                    borderRadius: 1000,
+                    backgroundColor: '#5f6363',
+                    padding: '15px 30px',
+                    fontSize: '15px',
+                    color: '#ebe6e6',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  Submit
+                </Button>
+                )}
+                <br />
+                <br />
+              </div>
+            </Grid>
+          </form>
+  
+        </Grid>
+      </div>
+    );
+  }
+
   return (
     <div style={{ width: windowWidth * 0.9, tableLayout: 'auto' }}>
       <Grid

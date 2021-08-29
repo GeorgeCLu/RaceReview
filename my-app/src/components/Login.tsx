@@ -82,6 +82,26 @@ const Login = (props: LoginProps) => {
   }, [user, password]);
 
   if (loggedInUser) {
+    if (windowWidth >= 600) {
+      return (
+        <div>
+          <br />
+          <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justify="center"
+          >
+            <br />
+            <div>
+              {`${loggedInUser} logged in`}
+            </div>
+          </Grid>
+        </div>
+      );
+    }
+
     return (
       <div style={{ width: windowWidth * 0.9, tableLayout: 'auto' }}>
         <br />
@@ -95,6 +115,94 @@ const Login = (props: LoginProps) => {
           <br />
           <div>
             {`${loggedInUser} logged in`}
+          </div>
+        </Grid>
+      </div>
+    );
+  }
+
+  if (windowWidth >= 600) {
+    return (
+      <div>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          <div>
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              justify="center"
+            >
+              <h2>Login</h2>
+              <br />
+              No password currently required.
+            </Grid>
+            <form onSubmit={onSubmit}>
+              <br />
+              <div>
+                <CustomTextField
+                  id="outlined-basic"
+                  label="Username - Max 25 char"
+                  className="test"
+                  variant="outlined"
+                  onChange={handleUser}
+                  value={user}
+                />
+              </div>
+              <br />
+              <br />
+              <Grid
+                container
+                spacing={0}
+                direction="column"
+                alignItems="center"
+                justify="center"
+              >
+                <div>
+                  <br/ >
+                  {((user === 'admin' || user === 'Admin' || user === 'ADMIN') 
+                    && (<div>
+                    <CustomTextField
+                      id="outlined-basic"
+                      label="Password"
+                      className="test"
+                      variant="outlined"
+                      type="password"
+                      onChange={handlePassword}
+                      value={password}
+                    />
+                  </div>))}
+                  <br />
+                </div>
+                <div>
+                  {IsFormValid && (
+                  <Button
+                    style={{
+                      borderRadius: 1000,
+                      backgroundColor: '#5f6363',
+                      padding: '15px 30px',
+                      fontSize: '15px',
+                      color: '#ebe6e6',
+                    }}
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    disabled={!IsFormValid}
+                  >
+                    login
+                  </Button>
+                  )}
+                  <br />
+                </div>
+              </Grid>
+            </form>
+            <br />
           </div>
         </Grid>
       </div>

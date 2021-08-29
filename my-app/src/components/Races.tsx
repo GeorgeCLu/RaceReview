@@ -120,7 +120,7 @@ const Races = (props: RacesProp) => {
 
   if (windowWidth > 1000) {
     return (
-      <div style={{ width: windowWidth * 0.9, tableLayout: 'auto' }}>
+      <div>
         <h2>Races</h2>
         <br />
         <form onSubmit={onSubmit}>

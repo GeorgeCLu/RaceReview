@@ -121,6 +121,141 @@ const Add = (props: AddProps) => {
     props.resetAddFields();
   };
 
+  if (windowWidth >= 600) {
+    return (
+      <div>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center"
+        >
+          <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justify="center"
+          >
+            <h2>Add Missing Races</h2>
+  
+            {props.message}
+          </Grid>
+          <p style={{display: "flex", justifyContent: "center", alignItems: "center"}}>You need to be logged in to add new races.</p>
+          <form onSubmit={onSubmit}>
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              justify="center"
+            >
+              <br />
+              <div>
+                <br />
+                <CustomTextField
+                  id="outlined-basic"
+                  label="Year"
+                  className="test"
+                  variant="outlined"
+                  type="number"
+                  value={props.year}
+                  onChange={handleAddYear}
+                />
+                <br />
+              </div>
+              <div>
+                <br />
+                <CustomTextField
+                  id="outlined-basic"
+                  label="Championship"
+                  className="test"
+                  variant="outlined"
+                  value={props.championship}
+                  onChange={handleAddChampionship}
+                />
+                <br />
+              </div>
+              <div>
+                <br />
+                <CustomTextField
+                  id="outlined-basic"
+                  label="Race Name"
+                  className="test"
+                  variant="outlined"
+                  value={props.race}
+                  onChange={handleAddRace}
+                />
+                <br />
+              </div>
+              <div>
+                <br />
+                <CustomTextField
+                  id="outlined-basic"
+                  label="Track"
+                  className="test"
+                  variant="outlined"
+                  value={props.track}
+                  onChange={handleAddTrack}
+                />
+                <br />
+              </div>
+              <div>
+                <br />
+                <CustomTextField
+                  id="outlined-basic"
+                  label="Location"
+                  className="test"
+                  variant="outlined"
+                  value={props.enteredlocation}
+                  onChange={handleAddLocation}
+                />
+                <br />
+              </div>
+              <br />
+            </Grid>
+            {IsFormValid && (
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              justify="center"
+            >
+              <div>
+                <br />
+                <Button
+                  disabled={!IsFormValid}
+                  style={{
+                    width: 40,
+                    height: 40,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRadius: 35,
+                    padding: '12px 24px',
+                    fontSize: '12px',
+                    backgroundColor: '#5f6363',
+                    color: '#ebe6e6',
+                  }}
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                >
+                  Add
+                </Button>
+                <br />
+                <br />
+              </div>
+            </Grid>
+            )}
+          </form>
+  
+        </Grid>
+        <br />
+      </div>
+    );
+  }
   return (
     <div style={{ width: windowWidth * 0.9, tableLayout: 'auto' }}>
       <Grid
@@ -141,6 +276,7 @@ const Add = (props: AddProps) => {
 
           {props.message}
         </Grid>
+        <p style={{display: "flex", justifyContent: "center", alignItems: "center"}}>You need to be logged in to add new races.</p>
         <form onSubmit={onSubmit}>
           <Grid
             container
