@@ -50,6 +50,8 @@ Once a review is submitted, the average score and total number of reviews will u
 Logging in as 'Admin' with 'password' as the password, gives full admin privileges, and can edit/delete races or other user's reviews.
 
 In Chrome only, for the review it uses the Web Speech API, so the user's voice input can be converted to text in the review box.
+It will listen for several spoken sentences.
+
 ![Alt text](reademeImages/31.png)<br/><br/>
 
 In the chat tab, logged in users can live chat to each other.
