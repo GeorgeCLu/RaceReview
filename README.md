@@ -61,6 +61,4 @@ The chat service is run as a Azure Function app which then connects to an instan
 
 Backend code is at https://github.com/GeorgeCLu/MSA_Race_Review_API
 
-Backend with Swagger ui interface web link: https://msaracereviewapi.azurewebsites.net/index.html
-
 SignalR chat code is at https://github.com/GeorgeCLu/racereviewchatsignalr
