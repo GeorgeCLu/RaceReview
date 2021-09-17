@@ -1,6 +1,7 @@
 # RaceReview
 
 https://racereviewmsa.azurewebsites.net/ is a sample site designed for users to submit reviews and ratings of past motor races such as Formula 1.
+Please note that the database may need to spool up, so please refresh if there is no data displayed.
 It is aimed to answer the commonly asked question of which past races to watch, so that other users can find races and their reviews and decide to watch or not.
 
 ![Alt text](reademeImages/2.png)<br/><br/>
